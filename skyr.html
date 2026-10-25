@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Made Icelandic Skyr</title>
+    <style>
+        :root {
+            --primary: #2b5c8f;
+            --secondary: #5dade2;
+            --dark-text: #2c3e50;
+            --light-bg: #f4f7f9;
+            --card-bg: #ffffff;
+            --border-color: #d6dbdf;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            margin: 0;
+            padding: 20px;
+        }
+        .recipe-container {
+            max-width: 850px;
+            margin: 30px auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border-top: 8px solid var(--primary);
+        }
+        h1 {
+            color: var(--primary);
+            margin-top: 0;
+            font-size: 2.2rem;
+            text-align: center;
+        }
+        .meta-banner {
+            display: flex;
+            justify-content: space-around;
+            background: #ebf5fb;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .meta-item strong {
+            color: var(--primary);
+        }
+        .overview-box {
+            background-color: #fcfcfc;
+            border-left: 4px solid var(--secondary);
+            padding: 15px 20px;
+            margin-bottom: 35px;
+            border-radius: 4px;
+        }
+        .overview-box h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+        .recipe-body {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        @media (min-width: 768px) {
+            .recipe-body {
+                grid-template-columns: 280px 1fr;
+            }
+        }
+        .ingredients-sidebar {
+            background: #fafbfc;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            height: fit-content;
+        }
+        .ingredients-sidebar h2 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-top: 0;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        .ingredients-sidebar ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        .ingredients-sidebar li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed #e5e8e8;
+        }
+        .ingredients-sidebar li:last-child {
+            border-bottom: none;
+        }
+        .steps-column h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-top: 0;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 5px;
+        }
+        .section-title {
+            color: var(--primary);
+            font-size: 1.15rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        ol {
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+        li {
+            margin-bottom: 12px;
+        }
+        .note {
+            font-size: 0.9rem;
+            color: #626567;
+            font-style: italic;
+            margin-top: 4px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="recipe-container">
+    <h1>Home Made Icelandic Skyr</h1>
+    
+    <div class="meta-banner">
+        <div class="meta-item"><strong>Yields:</strong> 4-5 8oz jars</div>
+        <div class="meta-item"><strong>Heating/Cooling:</strong> 3-4 hours</div>
+        <div class="meta-item"><strong>Culturing:</strong> 8-10 hours</div>
+        <div class="meta-item"><strong>Straining:</strong> 1 hour</div>
+    </div>
+
+    <div class="overview-box">
+        <h3>Process Overview</h3>
+        <p>Warm up the milk and hold at 190°F for ten minutes, cool it down to 110°F, add calcium chloride, rennet and starter skyr. Keep it warm overnight. Strain out the whey. Cool, whip &amp; jar.</p>
+    </div>
+
+    <div class="recipe-body">
+        <!-- Ingredients Sidebar -->
+        <div class="ingredients-sidebar">
+            <h2>Ingredients</h2>
+            <ul>
+                <li><strong>1 Gallon</strong> Clover Organic Non-fat or 1% milk <span class="note">(NOT ultra-pasteurized)</span></li>
+                <li><strong>1 cup</strong> water, boiled and cooled</li>
+                <li><strong>½ tablet</strong> Junket Rennet <span class="note">(or 7 drops liquid rennet)</span></li>
+                <li><strong>1 Heaping T</strong> fresh or frozen plain Icelandic Skyr <span class="note">(The real stuff, not Siggi's, not yogurt.)</span></li>
+                <li><strong>¼ t</strong> Calcium Chloride</li>
+            </ul>
+        </div>
+
+        <!-- Instructions Column -->
+        <div class="steps-column">
+            <h2>Preparation Steps</h2>
+
+            <div class="section-title">Phase 1: Heating &amp; Sterilizing</div>
+            <ol>
+                <li>Pour milk into a 6 Qt stainless pot placed in a cast iron fry pan on the burner at medium heat. Put the milk bottle back in the fridge to use for storing the whey later.</li>
+                <li>Bring the milk to 190-195°F over medium heat, uncovered. Stir and check the temperature every 10 or 15 minutes (takes almost two hours). It's okay to stir in any skin that forms on top, but do not disturb the scalded layer forming on the bottom.</li>
+                <li><strong>Meanwhile:</strong> Put an inch of water, a screen mesh sieve, measuring cups/spoons, a wooden spoon, whisks, rubber spatulas, funnels, and fine mesh produce bags into a 12 Qt stainless pot. Cover and boil for at least 10 minutes. Pour out the water and let everything air-dry as the milk heats up.</li>
+                <li>At the same time, boil a cup of water in a small stainless steel sauce pan for 10 minutes, then set aside to cool.</li>
+            </ol>
+
+            <div class="section-title">Phase 2: Transfer &amp; Cool Down</div>
+            <ol start="5">
+                <li>After holding the hot milk at 190°F for ten minutes, transfer it through the sterilized sieve into the clean 12 Qt pot for cooling. The skin will catch in the sieve and the scalded milk will remain stuck to the bottom of the cooking pot.</li>
+                <li>While the milk starts to cool uncovered in the larger pot, clean the cooking pot and sieve: Boil a 50/50 vinegar/water mixture in the pot to remove the scalded milk. Scour and steam-sterilize the sieve and wooden stirrer in the scoured pot, keeping it covered.</li>
+                <li>Cool the milk at room temperature in the big pot down to 115°F (takes 1 - 2 hours). Stir and check the temperature frequently.</li>
+            </ol>
+
+            <div class="section-title">Phase 3: Culturing</div>
+            <ol start="8">
+                <li>When the milk hits 115°F, take out 1 cup full of milk and set it aside.</li>
+                <li>Stir ⅛ teaspoon of Calcium Chloride into ¼ cup of your pre-boiled, cooled water. Stir this diluted mixture into the big pot of milk and set a timer for 5 minutes.</li>
+                <li><strong>During those 5 minutes, prepare your cultures:</strong> Add half a rennet tablet to another ¼ cup of your pre-boiled, cooled water. Check the temperature of the reserved cup of milk—once it cools to 110°F, mix in the heaping tablespoon of starter skyr.</li>
+                <li>Transfer the big pot of milk through the sieve back into your clean, original cooking pot (this step helps cool it down).</li>
+                <li>Check the temperature. When it drops to 110°F, stir in the rennet solution. Then, use the sieve to add the starter skyr mixture, pressing any lumps through the mesh.</li>
+                <li>Stir slowly to mix all components well without creating any froth. Skim off any surface foam.</li>
+                <li>Cover and keep the milk warm in the oven with the light turned on for 8 - 12 hours, until the curds break cleanly and the whey has visibly separated.</li>
+            </ol>
+
+            <div class="section-title">Phase 4: Straining &amp; Finishing</div>
+            <ol start="15">
+                <li>Slice the set curds into checkerboard squares. Take out a heaping tablespoon of these curds and freeze it to act as your starter culture for the next batch!</li>
+                <li>Arrange two straining bags: Place each bag inside a colander resting over a catch bowl, positioned underneath an overhead hook.</li>
+                <li>Alternately ladle the skyr gently into the bags. Hang each bag over its bowl to drain for an hour or so, or until they almost stop dripping. Handle with extreme care, or the curds will break down and liquefy.</li>
+                <li>Pour and save the collected whey into your original milk bottle for use in future baking.</li>
+                <li>Turn the straining bags inside out into a mixing bowl, cover, and refrigerate for a couple of hours.</li>
+                <li>Use an electric mixer to blend the cold skyr to a perfectly smooth consistency. If it feels too thick, splash in a little of the reserved whey.</li>
+                <li>Ladle the finished skyr into jars using a canning funnel. Store in the refrigerator where it will keep for up to two weeks!</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
