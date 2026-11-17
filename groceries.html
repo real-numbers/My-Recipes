@@ -102,6 +102,65 @@
 	<li><label><input type="checkbox"><span>Sunflower seeds</span></label></li>
    </span></label></li>
   </ul>
+<div style="position: sticky; top: 0; background: #fafafa; padding: 10px 0; border-bottom: 1px solid #ddd; margin-bottom: 15px; display: flex; gap: 10px;">
+  <button id="filterBtn" style="padding: 8px 14px; font-size: 0.95rem; border-radius: 6px; border: 1px solid #2c5e3b; background: #2c5e3b; color: white; cursor: pointer;">
+    Store Mode: Show Checked Only
+  </button>
+  <button id="clearBtn" style="padding: 8px 14px; font-size: 0.95rem; border-radius: 6px; border: 1px solid #ccc; background: white; color: #333; cursor: pointer;">
+    Uncheck All
+  </button>
+</div>
+
+<script>
+  const boxes = document.querySelectorAll('input[type="checkbox"]');
+  const filterBtn = document.getElementById('filterBtn');
+  const clearBtn = document.getElementById('clearBtn');
+  let storeMode = false;
+
+  // Move sticky bar to top of body
+  document.body.insertBefore(filterBtn.parentElement, document.body.children[1]);
+
+  // Load saved state by item text
+  boxes.forEach(box => {
+    const key = 'grocery_' + box.parentElement.innerText.trim();
+    if (localStorage.getItem(key) === 'true') box.checked = true;
+
+    box.addEventListener('change', () => {
+      localStorage.setItem(key, box.checked);
+      if (storeMode) applyFilter();
+    });
+  });
+
+  function applyFilter() {
+    boxes.forEach(box => {
+      box.closest('li').style.display = (!storeMode || box.checked) ? '' : 'none';
+    });
+    // Hide empty category headers in Store Mode
+    document.querySelectorAll('h2').forEach(h2 => {
+      const ul = h2.nextElementSibling;
+      if (ul && ul.tagName === 'UL') {
+        const hasVisible = Array.from(ul.children).some(li => li.style.display !== 'none');
+        h2.style.display = hasVisible ? '' : 'none';
+      }
+    });
+  }
+
+  filterBtn.addEventListener('click', () => {
+    storeMode = !storeMode;
+    filterBtn.textContent = storeMode ? 'Edit Mode: Show All Items' : 'Store Mode: Show Checked Only';
+    filterBtn.style.background = storeMode ? '#b85d19' : '#2c5e3b';
+    filterBtn.style.borderColor = storeMode ? '#b85d19' : '#2c5e3b';
+    applyFilter();
+  });
+
+  clearBtn.addEventListener('click', () => {
+    boxes.forEach(box => {
+      box.checked = false;
+      localStorage.removeItem('grocery_' + box.parentElement.innerText.trim());
+    });
+    if (storeMode) applyFilter();
+  });
+</script>
 
 </body>
 </html>
