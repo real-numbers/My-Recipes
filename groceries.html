@@ -52,52 +52,82 @@
 </head>
 <body>
 
-  <h1>3-Day Grocery List</h1>
+  <h1>Grocery List</h1>
 
-  <h2>Meat &amp; Seafood</h2>
+  <h2>Deli</h2>
+  <ul>
+	<li><label><input type="checkbox"><span>Hummus</span></label></li>
+    <li><label><input type="checkbox"><span>Rotisserie Chicken</span></label></li>
+  </ul> 
+
+  <h2>Dairy</h2>
+  <ul>
+	<li><label><input type="checkbox"><span>Milks</span></label></li>
+    <li><label><input type="checkbox"><span>Butter</span></label></li>
+  	<li><label><input type="checkbox"><span>Yogurt Starter</span></label></li>
+	<li><label><input type="checkbox"><span>Cottage Cheese</span></label></li>
+	<li><label><input type="checkbox"><span>Cheddar Cheese</span></label></li>
+  </ul>
+
+ <h2>Meat, Eggs &amp; Seafood</h2>
   <ul>
     <li><label><input type="checkbox"><span>Salmon</span></label></li>
     <li><label><input type="checkbox"><span>Bison</span></label></li>
     <li><label><input type="checkbox"><span>Chicken</span></label></li>
+	<li><label><input type="checkbox"><span>Eggs</span></label></li> 
+  </ul>
+	
+<h2>Freezer</h2>
+  <ul>
+    <li><label><input type="checkbox"><span>Frozen spinach</span></label></li>
+	<li><label><input type="checkbox"><span>Boca Burgers</span></label></li>
+	<li><label><input type="checkbox"><span>Chimichangas</span></label></li>
+	<li><label><input type="checkbox"><span>Frozen Fruit</span></label></li>
   </ul>
 
-  <h2>Dairy &amp; Freezer</h2>
+  <h2>Pantry</h2>
   <ul>
-    <li><label><input type="checkbox"><span>Cottage Cheese</span></label></li>
-    <li><label><input type="checkbox"><span>Frozen sliced peaches</span></label></li>
-	<li><label><input type="checkbox"><span>Milks</span></label></li>
-	<li><label><input type="checkbox"><span>Yogurt</span></label></li>
-	<li><label><input type="checkbox"><span>Eggs</span></label></li>
-  </ul>
+    <li><label><input type="checkbox"><span>Tortillas</span></label></li>	
+    <li><label><input type="checkbox"><span>Walnuts</span></label></li>
+	<li><label><input type="checkbox"><span>Sunflower seeds</span></label></li>
+	<li><label><input type="checkbox"><span>Chocolate</span></label></li>
+	<li><label><input type="checkbox"><span>Cereal</span></label></li>
+	<li><label><input type="checkbox"><span>Oatmeal</span></label></li>
+    <li><label><input type="checkbox"><span>Figgy Bars</span></label></li>
+	<li><label><input type="checkbox"><span>Salad Dressing</span></label></li>
+	<li><label><input type="checkbox"><span>Peanuts</span></label></li>
+	<li><label><input type="checkbox"><span>Noodles</span></label></li>
+   </span></label></li>
+  </ul>	
 
-  <h2>Fresh Fruit</h2>
+<h2>Baking</h2>
   <ul>
-    <li><label><input type="checkbox"><span>blueberries</span></label></li>
+	<li><label><input type="checkbox"><span>Bread Flour</span></label></li>
+    <li><label><input type="checkbox"><span>Whole Wheat Flour</span></label></li>
+    <li><label><input type="checkbox"><span>Ground Flax</span></label></li>
+    <li><label><input type="checkbox"><span>Yeast</span></label></li>
+	<li><label><input type="checkbox"><span>Powdered Milk</span></label></li>
+  	<li><label><input type="checkbox"><span>Honey</span></label></li>
+  </ul>
+	
+  <h2>Produce</h2>
+  <ul>
+	<li><label><input type="checkbox"><span>Tofu</span></label></li>
+	<li><label><input type="checkbox"><span>Sweet potatoes</span></label></li>
+    <li><label><input type="checkbox"><span>Blueberries</span></label></li>
     <li><label><input type="checkbox"><span>Tangerines</span></label></li>
     <li><label><input type="checkbox"><span>Lemons</span></label></li>
 	<li><label><input type="checkbox"><span>Avocado</span></label></li>
-  </ul>
-
-  <h2>Fresh Vegetables</h2>
-  <ul>
-    <li><label><input type="checkbox"><span>Mixed salad greens</span></label></li>
+    <li><label><input type="checkbox"><span>Cabbage</span></label></li>
     <li><label><input type="checkbox"><span>Cucumber</span></label></li>
     <li><label><input type="checkbox"><span>Broccoli</span></label></li>
 	<li><label><input type="checkbox"><span>Kale</span></label></li>
     <li><label><input type="checkbox"><span>Brussels Sprouts</span></label></li>
     <li><label><input type="checkbox"><span>Green beans</span></label></li>
     <li><label><input type="checkbox"><span>Carrots</span></label></li>
-    <li><label><input type="checkbox"><span>Red onion (1 small) &amp; garlic (1 bulb)</span></label></li>
+    <li><label><input type="checkbox"><span>Onions/Garlic/Herbs</span></label></li>
   </ul>
 
-  <h2>Starches &amp; Pantry (Check Stock)</h2>
-  <ul>
-    <li><label><input type="checkbox"><span>Tortillas</span></label></li>
-	<li><label><input type="checkbox"><span>Sweet potatoes</span></label></li>
-    <li><label><input type="checkbox"><span>Walnuts</span></label></li>
-	<li><label><input type="checkbox"><span>Sunflower seeds</span></label></li>
-   </span></label></li>
-  </ul>
 <div style="position: sticky; top: 0; background: #fafafa; padding: 10px 0; border-bottom: 1px solid #ddd; margin-bottom: 15px; display: flex; gap: 10px;">
   <button id="filterBtn" style="padding: 8px 14px; font-size: 0.95rem; border-radius: 6px; border: 1px solid #2c5e3b; background: #2c5e3b; color: white; cursor: pointer;">
     Store Mode: Show Checked Only
